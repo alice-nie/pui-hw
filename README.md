@@ -1,5 +1,5 @@
 # PUI homework
 
-Deployed website: `add the URL to your deployed website`
+Deployed website: [alice-nie.github.io/pui-hw/](https://alice-nie.github.io/pui-hw/)
 
-Repository link: `add the URL to this repository`
+Repository link: [https://github.com/alice-nie/pui-hw/](https://github.com/alice-nie/pui-hw/)
