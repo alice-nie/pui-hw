@@ -1,0 +1,222 @@
+/* ------UNIVERSAL------- */
+
+p, a{
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+a{
+    text-decoration: none;
+}
+
+
+
+/* HEADER */
+
+.logo{
+    width: 400px;
+    margin: 15px 40px 15px 4px;
+}
+
+hr{
+    height: 5px;
+    background-color: black;
+}
+
+/* NAV */
+
+nav{
+    text-align: center;
+}
+
+/* Learned how to get rid of underlines */
+/* https://www.w3schools.com/css/css_link.asp */
+nav a{
+    color: black;
+    line-height: 52px;
+    font-size: 28px;
+}
+
+nav a.selected{
+    background-color: yellow;
+    font-weight: bold;
+}
+
+
+
+/* --------PRODUCTS.HTML--------- */
+
+/* GALLERY */
+
+#cinrolls{
+    font-size: 48px;
+    text-align: center;
+}
+
+/* Learned how to center content*/
+/* https://www.w3schools.com/css/css_margin.asp */
+.card{
+    margin: 50px auto;
+    width: 410px;
+    padding: 10px;
+}
+
+.card:hover{
+    background-color: yellow;
+}
+
+.card img{
+    width: 400px;
+    height: 400px;
+    border: 5px solid black;
+}
+
+.card p{
+    color: black;
+    font-size: 34px;
+    margin: 5px;
+}
+
+.card:hover p.name{
+    font-weight:bold
+}
+
+p.name{
+    text-decoration: underline;
+}
+
+
+
+/* --------DETAIL.HTML--------- */
+
+#product{
+    margin-top: 100px;
+}
+
+#og{
+    font-size: 36px;
+    text-align: center;
+}
+
+#product img {
+    display: block;
+    width: 600px;
+    height: 600px;
+    margin: 30px auto;
+    border: 5px solid black;
+}
+
+#customization{
+    width: 300px;
+    margin: auto;
+}
+
+#instructions{
+    font-size: 22px;
+    width: 300px;
+    margin: auto;
+    text-align: left;
+    margin-bottom: 50px;
+}
+
+.dropdown {
+    font-size: 22px;
+    text-align:left;
+    line-height: 0px;
+    margin: 40px 0px;
+}
+
+#cart{
+    font-weight: bold;
+    font-size: 20px;
+    width: 275px;
+
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+}
+
+/* Learned from lab01 */
+#to-cart{
+    width: 150px;
+    height: 50px;
+
+    margin-left: 40px;
+
+    font-size: 20px;
+    font-weight: bold;
+
+    background-color: yellow;
+    border: 2px solid black;
+
+    cursor: pointer;
+}
+
+
+
+/* --------CART.HTML--------- */
+
+#shopping-cart{
+    text-align: center;
+}
+
+#cart-title{
+    font-size: 36px;
+    margin-top: 125px;
+}
+
+.checkout-item{
+    margin-top: 50px;
+    margin-bottom: 100px;
+}
+
+.checkout-item img{
+    width: 200px;
+    height: 200px;
+    border: 5px solid black;
+}
+
+.checkout-item p{
+    font-size: 26px;
+    line-height: 35px;
+    margin: 10px;
+}
+
+p.remove{
+    font-weight: bold;
+    font-size: 14px;
+    text-decoration: underline;
+    margin-top: 0px;
+}
+
+p.item-price{
+    margin-top: 25px;
+    font-size: 36px;
+}
+
+hr#cart-line{
+    width: 800px;
+}
+
+#cart-end{
+    width: 225px;
+    margin: 30px auto;
+    text-align: center;
+}
+
+#total{
+    font-size: 36px;
+    margin: 15px 0px;
+}
+
+#checkout-btn{
+    width: 100%;
+    height: 60px;
+
+    font-size: 26px;
+    font-weight: bold;
+
+    background-color: yellow;
+    border: 3px solid black;
+
+    cursor: pointer;
+}

@@ -1,15 +1,78 @@
 <!DOCTYPE html>
 <html lang="en">
-  <meta charset="UTF-8">
-  <title>Page Title</title>
+
+  <head>
+    <meta charset="UTF-8"/>
+    <title>Product Gallery</title>
+
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+  </head>
+
   
   <body>
+    
+    <!-- logo -->
+    <a href="./index.html">
+      <img class="logo" src="../assets/logo/logo-01.svg" alt="Logo"/>
+    </a>
 
-    <h1>I am an updated solution to HW1!</h1>
+    <hr>
 
-    <p>
-        And I can link to <a href="./otherpage.html">other pages.</a>
-    </p>
+    <!-- navbar -->
+    <nav>
+      <a class="selected" href="./index.html">PRODUCTS</a>
+      <br>
+      <a href="./cart.html">CART</a>
+    </nav>
+    
+    <!-- gallery -->
+    <main id="gallery">
+      <p id="cinrolls">Our hand-made cinnamon rolls</p>
+
+      <!-- made the whole card a link b/c of 2.4 Layout & Styling-->
+      <!-- "Clicking ANYWHERE in the highlighted section (including the image) should direct to the Product Detail Page." -->
+      <!-- contradictory instructions: 2.3 Correct Linking says just image or product name. -->
+      <!-- In that case, I would </a> before price and change style accordingly -->
+      <a href="./detail.html">
+        <div class="card">         
+            <img src="../assets/products/original-cinnamon-roll.jpg" alt="Original Cinnamon Roll"/>
+            <p class="name">Original cinnamon roll</p>
+            <p class="price">$ 2.49</p>
+        </div>
+
+        <div class="card"> 
+            <img src="../assets/products/apple-cinnamon-roll.jpg" alt="Apple Cinnamon Roll"/>
+            <p class="name">Apple cinnamon roll</p>
+            <p class="price">$ 3.49</p>
+        </div>
+
+        <div class="card"> 
+            <img src="../assets/products/raisin-cinnamon-roll.jpg" alt="Raisin Cinnamon Roll"/>
+            <p class="name">Raisin cinnamon roll</p>
+            <p>$ 2.99</p>
+        </div>
+
+        <div class="card"> 
+            <img src="../assets/products/walnut-cinnamon-roll.jpg" alt="Walnut Cinnamon Roll"/>
+            <p class="name">Walnut cinnamon roll</p>
+            <p class="price">$ 3.49</p>
+        </div>
+
+        <div class="card"> 
+            <img src="../assets/products/double-chocolate-cinnamon-roll.jpg" alt="Double Chocolate Cinnamon Roll"/>
+            <p class="name">Double-chocolate cinnamon roll</p>
+            <p class="price">$ 3.99</p>
+        </div>
+
+        <div class="card"> 
+            <img src="../assets/products/Strawberry-cinnamon-roll.jpg" alt="Strawberry Cinnamon Roll"/>
+            <p class="name">Strawberry cinnamon roll</p>
+            <p class="price">$ 3.99</p>
+        </div>
+
+      </a>
+    </main>
+
 
   </body>
 </html>

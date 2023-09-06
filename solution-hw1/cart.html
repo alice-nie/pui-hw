@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="UTF-8"/>
+    <title>Product Detail</title>
+
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+  </head>
+
+  
+  <body>
+
+    <!-- logo -->
+    <a href="./index.html">
+        <img class="logo" src="../assets/logo/logo-01.svg" alt="Logo"/>
+    </a>
+    
+    <hr>
+
+    <!-- navbar -->
+    <nav>
+      <a href="./index.html">PRODUCTS</a>
+      <br>
+      <a class="selected" href="./cart.html">CART</a>
+    </nav>
+
+    <!-- cart with items -->
+    <main id="shopping-cart">
+
+        <p id="cart-title">Shopping Cart</p>
+
+        <div class="checkout-item">
+            <img src="../assets/products/original-cinnamon-roll.jpg" alt="Original Cinnamon Roll"/>
+            <p class="remove">Remove</p>
+            <p>
+                Original Cinnamon Roll <br>
+                Glazing: Keep original <br>
+                Pack Size: 1
+            </p>
+            <p class="item-price">$ 2.49</p>
+        </div>
+    
+        <div class="checkout-item">
+            <img src="../assets/products/double-chocolate-cinnamon-roll.jpg" alt="Double Chocolate Cinnamon Roll"/>
+            <p class="remove">Remove</p>
+            <p>
+                Double Chocolate Cinnamon Roll <br>
+                Glazing: Sugar milk <br>
+                Pack Size: 6
+            </p>
+            <p class="item-price">$ 27.45</p>
+        </div>
+    </main>
+
+    <hr id="cart-line">
+
+    <!-- confirm total payment and checkout -->
+    <div id="cart-end">
+        <p id="total">Total: $ 29.94</p>
+        <button id="checkout-btn">
+            Checkout
+        </button>
+    </div>
+</body>
+</html>
