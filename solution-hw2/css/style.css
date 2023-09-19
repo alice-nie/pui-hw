@@ -1,0 +1,278 @@
+/* ------UNIVERSAL------- */
+
+p, a{
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+a{
+    text-decoration: none;
+}
+
+.title{
+    font-size: 34px;
+    margin: 15px;
+}
+
+
+/* HEADER */
+
+.header{
+    display: flex;
+    margin-bottom: 50px;
+}
+
+.header-right{
+    display: flex;
+    flex-grow: 1;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: flex-start;
+}
+
+.logo{
+    width: 400px;
+    margin: 15px 30px 15px 30px;
+}
+
+hr{
+    /* to keep line horizontal */
+    /* https://stackoverflow.com/questions/34365271/hr-inside-container-with-display-flex-become-corrupted#:~:text=If%20there%20is%20a%20container,the%20height%20of%20the%20line.&text=Check%20out%20this%20pen.,confirmed%20on%20Firefox%20and%20Chrome. */
+    width: 100%;
+    height: 5px;
+    background-color: black;
+}
+
+
+
+/* NAV */
+
+nav{
+    width: 50%;
+    align-self: flex-end;
+    display: flex;
+    text-align: center;
+    justify-content: space-evenly;
+}
+
+/* Learned how to get rid of underlines */
+/* https://www.w3schools.com/css/css_link.asp */
+nav a{
+    color: black;
+    line-height: 36px;
+    font-size: 28px;
+}
+
+nav a.selected{
+    background-color: yellow;
+    font-weight: bold;
+}
+
+
+/* --------PRODUCTS.HTML--------- */
+
+/* GALLERY */
+
+#gallery{
+    display: flex;
+    justify-content: center;
+}
+
+#gallery a{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+/* Learned how to center content*/
+/* https://www.w3schools.com/css/css_margin.asp */
+.card{
+    margin: 25px 25px;
+    width: 295px;
+    padding: 10px;
+}
+
+.card:hover{
+    background-color: yellow;
+}
+
+.card img{
+    width: 285px;
+    height: 285px;
+    border: 5px solid black;
+}
+
+.card p{
+    color: black;
+    font-size: 24px;
+    margin: 5px;
+}
+
+.card:hover p.name{
+    font-weight:bold
+}
+
+p.name{
+    text-decoration: underline;
+}
+
+
+
+/* --------DETAIL.HTML--------- */
+
+#product-detail-flex{
+    display: flex;
+    justify-content: center;
+    gap: 45px;
+}
+
+#product-detail-flex img {
+    width: 600px;
+    height: 600px;
+    border: 5px solid black;
+}
+
+#customization{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    width: 330px;
+}
+
+#instructions{
+    font-size: 26px;
+    text-align: left;
+    margin-bottom: 0px;
+}
+
+#options{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+#options select{
+    width: 300px;
+    height: 40px;
+    border: 3px solid black;
+    font-size: 26px;
+
+}
+.dropdown {
+    font-size: 26px;
+    text-align: left;
+    line-height: 0px;
+}
+
+#cart{
+    font-weight: bold;
+    font-size: 26px;
+    width: 275px;
+
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+}
+
+/* Learned from lab01 */
+#to-cart{
+    width: 150px;
+    height: 50px;
+
+    margin-left: 40px;
+
+    font-size: 22px;
+    font-weight: bold;
+
+    background-color: yellow;
+    border: 2px solid black;
+
+    cursor: pointer;
+}
+
+
+
+/* --------CART.HTML--------- */
+
+#shopping-cart{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+}
+
+.checkout-item{
+    width: 60%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 30px;
+    /* margin-right: 20px; */
+}
+
+.checkout-item img{
+    width: 200px;
+    height: 200px;
+    border: 5px solid black;
+}
+
+p.item-description{
+    font-size: 22px;
+}
+
+p.item-price{
+    text-align: right;
+    font-size: 28px;
+    flex-grow: 1;
+    margin-right: 20px;
+}
+
+p.remove{
+    font-weight: bold;
+    font-size: 18px;
+    text-decoration: underline;
+    margin-top: 10px;
+    margin-bottom: 20px;
+    width: 60%;
+}
+
+/* debugging, getting hr to align with the flexbox by setting margin to 0 */
+/* https://stackoverflow.com/questions/48405602/align-an-hr-element-inside-a-flex-container */
+hr#cart-line{
+    width: 60%;
+    margin: 0;
+}
+
+#sum{
+    display: flex;
+    width: 39%;
+    margin-top: 15px;
+    justify-content: flex-start;
+}
+
+#sum p{
+    font-size: 28px;
+    margin: 15px 0px;
+}
+
+p#total-price{
+    text-align: right;
+    flex-grow: 1;
+    margin-right: 20px;
+}
+
+
+#checkout-btn{
+    width: 200px;
+    height: 60px;
+
+    font-size: 26px;
+    font-weight: bold;
+
+    background-color: yellow;
+    border: 3px solid black;
+
+    cursor: pointer;
+
+    margin-top: 30px;
+    margin-right: 20px;
+}
