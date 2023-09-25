@@ -6,7 +6,6 @@
     <title>Product Detail</title>
 
     <link rel="stylesheet" type="text/css" href="css/style.css">
-    <script src="./js/app.js" defer></script>
   </head>
 
   
@@ -47,22 +46,28 @@
         <div id="options">
           <div class="dropdown">
             <p>Glazing:</p>
-            <select id="glazing-select" onchange="glazingChange(this)">
-              <!-- options populated dynamically -->
+            <select name="glazing" id="glazing">
+              <option value="keep original">Keep original</option>
+              <option value="sugar milk">Sugar milk</option>
+              <option value="vanilla milk">Vanilla milk</option>
+              <option value="double chocolate">Double chocolate</option>
             </select>
           </div>
 
           <div class="dropdown">
             <p>Pack size:</p>
-            <select id="size-select" onchange="sizeChange(this)">
-              <!-- options populated dynamically -->
+            <select name="size" id="size">
+              <option value="1">1</option>
+              <option value="3">3</option>
+              <option value="6">6</option>
+              <option value="12">12</option>
             </select>
           </div>
         </div>
 
         <!-- adding to cart -->
         <div id="cart">
-            <p>$ <span id="price">2.49</span>
+            <p>$ 2.49
               <button id="to-cart"> 
                 Add to Cart
               </button>
