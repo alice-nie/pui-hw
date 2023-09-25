@@ -55,9 +55,6 @@ for (let x of allSizeOptions)
 
 // rounding to two decimals w/ toFixed learned from
 // https://www.w3schools.com/jsref/jsref_tofixed.asp
-
-// debugging with parseFloat from
-// https://stackoverflow.com/questions/4937251/why-is-my-tofixed-function-not-working
 function displayPrice(price) {
     let priceElement = document.querySelector("#price");
     priceElement.innerText = price.toFixed(2);
