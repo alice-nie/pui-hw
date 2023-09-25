@@ -3,9 +3,12 @@
 let glazingDropdown = document.querySelector("#glazing-select");
 
 class GlazingOptions {
-    constructor(type, price) {
-        this.glazing = type;
-        this.priceAdaptation = price;
+    glazing;
+    priceAdaptation;
+
+    constructor(glazing, priceAdaptation) {
+        this.glazing = glazing;
+        this.priceAdaptation = priceAdaptation;
     }
 }
 
@@ -29,9 +32,12 @@ for (let x of allGlazingOptions)
 let sizeDropdown = document.querySelector("#size-select")
 
 class SizeOptions {
-    constructor(size, price) {
+    size;
+    priceAdaptation;
+
+    constructor(size, priceAdaptation) {
         this.size = size;
-        this.priceAdaptation = price;
+        this.priceAdaptation = priceAdaptation;
     }
 }
 
