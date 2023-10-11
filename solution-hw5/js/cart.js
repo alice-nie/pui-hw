@@ -107,7 +107,7 @@ function updateElement(roll) {
     const rollDescElement = roll.element.querySelector(".item-description");
     const rollPriceElement = roll.element.querySelector(".item-price");
 
-    rollImageElement.src = "/assets/products/" + rolls[roll.type].imageFile;
+    rollImageElement.src = "../assets/products/" + rolls[roll.type].imageFile;
     rollDescElement.innerText = 
     `${roll.type} Cinnamon Roll
     ${roll.glazing} 
