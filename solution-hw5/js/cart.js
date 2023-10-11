@@ -52,10 +52,10 @@ function addComputedRoll(rollType, rollGlazing, packSize, rollPrice) {
 }
 
 
-addComputedRoll("Apple", "Original", 3, 3.49);
-addComputedRoll("Raisin", "Sugar Milk", 3, 2.99);
-addComputedRoll("Walnut", "Vanilla Milk", 12, 3.49);
-addComputedRoll("Original", "Sugar Milk", 1, 2.49);
+addComputedRoll("Apple", "Original", 3, rolls["Apple"].basePrice);
+addComputedRoll("Raisin", "Sugar Milk", 3, rolls["Raisin"].basePrice);
+addComputedRoll("Walnut", "Vanilla Milk", 12, rolls["Walnut"].basePrice);
+addComputedRoll("Original", "Sugar Milk", 1, rolls["Original"].basePrice);
 
 
 // to populate the set
@@ -66,18 +66,18 @@ for (const roll of cartSet) {
 
 // Display cart items on the page, uses template
 function createElement(roll) {
-    const template = document.querySelector('#checkout-item-template');
+    const template = document.querySelector("#checkout-item-template");
     const clone = template.content.cloneNode(true);
-    roll.element = clone.querySelector('.checkout-item');
+    roll.element = clone.querySelector(".checkout-item");
 
-    const btnRemove = roll.element.querySelector('.remove');
-    btnRemove.addEventListener('click', () => {
+    const btnRemove = roll.element.querySelector(".remove");
+    btnRemove.addEventListener("click", () => {
         deleteRoll(roll);
-        const sumElement = document.querySelector('#total-price');
+        const sumElement = document.querySelector("#total-price");
         sumElement.innerText = "$ " + cartPrice(cartSet)
     });
 
-    const cartListElement = document.querySelector('#shopping-cart');
+    const cartListElement = document.querySelector("#shopping-cart");
     cartListElement.prepend(roll.element);
 
     updateElement(roll);
@@ -103,9 +103,9 @@ function deleteRoll(roll) {
 // https://www.shecodes.io/athena/8931-creating-a-string-with-variables-in-javascript#:~:text=To%20add%20a%20variable%20to%20a%20string%2C%20you%20can,string%20concatenation%20or%20string%20interpolation.&text=let%20name%20%3D%20%22John%22%3B,Output%3A%20%22Hello%20John!%22&text=let%20name%20%3D%20%22John%22%3B%20let%20greeting%20%3D%20%60Hello,%24%7Bname%7D!%60%3B%20console.
 // updates the checkout items 
 function updateElement(roll) {
-    const rollImageElement = roll.element.querySelector('.checkout-img');
-    const rollDescElement = roll.element.querySelector('.item-description');
-    const rollPriceElement = roll.element.querySelector('.item-price');
+    const rollImageElement = roll.element.querySelector(".checkout-img");
+    const rollDescElement = roll.element.querySelector(".item-description");
+    const rollPriceElement = roll.element.querySelector(".item-price");
 
     rollImageElement.src = "/assets/products/" + rolls[roll.type].imageFile;
     rollDescElement.innerText = 
@@ -115,7 +115,7 @@ function updateElement(roll) {
     rollPriceElement.innerText = "$ " + roll.basePrice; //calculated with function
 
     //final price sum
-    const sumElement = document.querySelector('#total-price');
+    const sumElement = document.querySelector("#total-price");
     sumElement.innerText = "$ " + cartPrice(cartSet)
 }
 
