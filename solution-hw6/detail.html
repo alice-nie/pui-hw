@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="UTF-8"/>
+    <title>Product Detail</title>
+
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <script src="./js/rollsData.js" defer></script>
+    <script src="./js/app.js" defer></script>
+    <script src="./js/detail.js" defer></script>
+  </head>
+
+  
+  <body>
+
+    <div class="header">
+    <!-- logo -->
+    <a href="./index.html">
+      <img class="logo" src="../assets/logo/logo-01.svg" alt="Logo"/>
+    </a>
+    
+    <div class="header-right">
+      <!-- navbar -->
+      <nav>
+        <a class="selected" href="./index.html">PRODUCTS</a>
+        <a href="./cart.html">CART</a>
+      </nav>
+
+      <hr>
+
+      <!-- product title -->
+      <p id="product-detail-title">Original cinnamon roll</p>
+
+    </div>
+  </div>
+
+    <!-- customizing the item -->
+
+    <div id="product-detail-flex">
+
+      <img id = "product-detail-img" src="../assets/products/original-cinnamon-roll.jpg" alt="Original Cinnamon Roll"/>
+      
+      <div id="customization">
+
+        <p id="instructions"> Customize our delicious, hand-made cinammon roll to your liking!</p>
+
+        <!-- Dropdown area -->
+        <div id="options">
+          <div class="dropdown">
+            <p>Glazing:</p>
+            <select id="glazing-select" onchange="glazingChange(this)">
+              <!-- options populated dynamically -->
+            </select>
+          </div>
+
+          <div class="dropdown">
+            <p>Pack size:</p>
+            <select id="size-select" onchange="sizeChange(this)">
+              <!-- options populated dynamically -->
+            </select>
+          </div>
+        </div>
+
+        <!-- adding to cart -->
+        <div id="cart">
+            <p>$ <span id="price">2.49</span>
+              <button id="to-cart"> 
+                Add to Cart
+              </button>
+            </p>
+        </div>
+      </div>
+
+    </div>
+  </body>
+</html>

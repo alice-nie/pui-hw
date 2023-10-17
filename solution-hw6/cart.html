@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="UTF-8"/>
+    <title>Product Detail</title>
+
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    
+    <script src="./js/rollsData.js" defer></script>
+    <script src="./js/app.js" defer></script>
+    <script src="./js/cart.js" defer></script>
+  </head>
+
+  
+  <body>
+
+    <div class="header">
+        <!-- logo -->
+        <a href="./index.html">
+            <img class="logo" src="../assets/logo/logo-01.svg" alt="Logo"/>
+        </a>
+        
+        <div class="header-right">
+
+        <!-- navbar -->
+        <nav>
+            <a href="./index.html">PRODUCTS</a>
+            <a class="selected" href="./cart.html">CART</a>
+        </nav>
+
+        <hr>
+
+        <p class="title">Shopping cart</p>
+
+        </div>
+    </div>
+
+    <!-- cart with items -->
+    <main id="shopping-cart">
+
+            <!-- items to buy -->
+        <!-- <div id="cart-list"> -->
+            <template id="checkout-item-template">
+                <div class="checkout-item">
+                    <div class="item-main">
+                        <img class="checkout-img" src="../assets/products/original-cinnamon-roll.jpg" alt="Original Cinnamon Roll"/>
+                        <p class="item-description">
+                            Original Cinnamon Roll <br>
+                            Glazing: Keep original <br>
+                            Pack Size: 1
+                        </p>
+                        <p class="item-price">$ 0.00</p>
+                    </div>
+                    <p class="remove">Remove</p>
+                </div>
+            </template>
+
+            <hr id="cart-line">
+
+            <div id="sum">
+                <p id="total">Total</p>
+                <p id="total-price">$ 0.00</p>
+            </div>
+
+            <button id="checkout-btn">
+                Checkout
+            </button>
+        <!-- </div> -->
+    </main>
+</body>
+</html>
