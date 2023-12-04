@@ -1,0 +1,19 @@
+
+/* https://www.w3schools.com/cssref/pr_background-attachment.php */
+body {
+    background-image: url("../img/background.png");
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+/* https://blog.logrocket.com/15-ways-implement-vertical-alignment-css/ */
+/* vertical alignment */
+#questBox {
+    position: absolute;
+    top: 0; bottom: 0; left: 0; right: 0;
+    margin: auto;
+    height: 300px;
+    width: 450px;
+    background-color: transparent;
+}
+
