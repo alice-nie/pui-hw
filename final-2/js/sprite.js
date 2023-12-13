@@ -150,6 +150,7 @@ function gameLoop() {
         yesBtn.innerHTML = "ACCEPT";
         yesBtn.onclick = function () {
             location.href = "./work.html"
+            questCreated = false; // DEBUG
         }
         btnContainer.appendChild(yesBtn);
 
