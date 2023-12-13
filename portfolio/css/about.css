@@ -126,15 +126,10 @@ div {
   aspect-ratio: 1/1;
   position: relative;
   padding: 1.5rem;
-  color: #ffffff;
+  color: gray;
   backface-visibility: hidden;
   text-decoration: none;
   overflow: hidden;
-}
-
-.block__name{
-  color: white;
-  background: transparent;
 }
 
 .block::before,
