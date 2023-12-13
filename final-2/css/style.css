@@ -5,7 +5,6 @@ body {
     background-image: url("../img/background.png");
     background-position: center center;
     background-attachment: fixed;
-    overflow: hidden;
     background-repeat: no-repeat;
     background-size: cover;
 }
