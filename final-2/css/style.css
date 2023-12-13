@@ -1,15 +1,17 @@
 
 /* https://www.w3schools.com/cssref/pr_background-attachment.php */
-body {
-    background-image: url("../img/background.png");
-    background-position: center center;
-    background-attachment: fixed;
-    overflow: hidden;
-    background-repeat: no-repeat;
-    background-size: contain;
+@media (max-width: 1250px) {
+    body {
+        background-image: url("../img/background.png");
+        background-position: center center;
+        background-attachment: fixed;
+        overflow: hidden;
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
 }
 
-@media (min-width: 1250px) {
+@media (min-width: 1251px) {
     body {
         background-image: url("../img/background-laptop.png");
         background-position: center center;
