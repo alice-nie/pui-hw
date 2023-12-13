@@ -99,6 +99,7 @@ p {
   );
   grid-gap: var(--auto-grid-gap, 0);
   padding: 0;
+  background-color: black;
 }
 
 @media screen and (max-width: 1250px) {
@@ -118,6 +119,7 @@ p {
 
 /* Blocks */
 .block {
+  z-index: 1;
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
