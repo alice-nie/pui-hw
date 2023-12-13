@@ -88,9 +88,7 @@ p {
 
 /* Code for the bottom gallery animation, changes in variable naming and media queries*/
 /* https://codemyui.com/grayscale-to-colour-animation-on-hover-for-team-section/ */
-div {
-  color: currentcolor;
-}
+
 
 /* Utilities */
 .auto-grid {
