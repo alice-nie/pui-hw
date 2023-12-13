@@ -7,11 +7,11 @@ body {
     background-attachment: fixed;
     overflow: hidden;
     background-repeat: no-repeat;
-    background-size: contain;
+    background-size: cover;
 }
 
 
-@media screeen and (min-width: 1250px) {
+@media screen and (min-width: 1250px) {
     body {
         background-image: url("../img/background-laptop.png");
         background-position: center center;
