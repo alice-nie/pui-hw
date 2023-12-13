@@ -132,6 +132,11 @@ div {
   overflow: hidden;
 }
 
+.block__name{
+  color: white;
+  background: transparent;
+}
+
 .block::before,
 .block::after {
   content: "";
