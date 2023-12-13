@@ -67,7 +67,7 @@ body{
     background-color: transparent;
     font-family: "Inter", sans-serif;
     font-size: 18px;
-    color: gray;
+    color: #535353;
     transition: transform .5s;
 }
 
