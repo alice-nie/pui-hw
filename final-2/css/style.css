@@ -1,6 +1,7 @@
+/* stylesheet for sprite and home page (index.html) */
 
+/* Learned how to add background image */
 /* https://www.w3schools.com/cssref/pr_background-attachment.php */
-
 body {
     background-image: url("../img/background.png");
     background-position: center center;
@@ -10,7 +11,7 @@ body {
     overflow: hidden;
 }
 
-
+/* Fitting background image dimensions to different screen width */
 @media screen and (min-width: 1250px) {
     body {
         background-image: url("../img/background-laptop.png");
@@ -22,9 +23,8 @@ body {
     }
   }
 
-
+/* Learned how to get vertical alignment using absolute positioning */
 /* https://blog.logrocket.com/15-ways-implement-vertical-alignment-css/ */
-/* vertical alignment */
 #questBox {
     position: absolute;
     top: 0; bottom: 0; left: 0; right: 0;
@@ -71,8 +71,6 @@ button{
     font-weight:bold;
     transition: all 0.25s ease;
 }
-
-
 
 #yesBtn{
     background-color: #A8CFAA;

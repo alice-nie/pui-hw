@@ -1,3 +1,5 @@
+/* Stylesheet for About page */
+
 h1, h2{
     font-family: "Volkhov", serif;
     font-weight: normal;
@@ -84,7 +86,7 @@ p {
   }
 }
 
-/* Code for the bottom gallery animation */
+/* Code for the bottom gallery animation, changes in variable naming and media queries*/
 /* https://codemyui.com/grayscale-to-colour-animation-on-hover-for-team-section/ */
 div {
   color: currentcolor;

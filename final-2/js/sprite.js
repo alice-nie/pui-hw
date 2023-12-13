@@ -13,16 +13,15 @@ let playerX;
 let playerSheet = {};
 let speed = 5;
 
-// to ensure text doesn't repeat
+// to ensure text in questbox doesn't repeat, create boolean
 let questCreated = false;
 
-
+// sprite moves on click (laptop) or tap (mobile)
 window.addEventListener("click", moveSprite);
 
-
+// Calling all the functions to make the sprite
 PIXI.Assets.load([
     "./img/spritewalk.png", 
-    "./img/spritejump.png"
 ]).then(() =>
     {
         createPlayerSheet();
@@ -31,12 +30,12 @@ PIXI.Assets.load([
     }
 );
 
+// Splicing up the sprite sheet for character frames
 function createPlayerSheet() {
     let sheet = PIXI.BaseTexture.from("./img/spritewalk.png");
     let w = 1999/9;
     let h = 1334/4;
 
-    // standing still
     playerSheet["faceFront"] = [
         new PIXI.Texture(sheet, new PIXI.Rectangle(0, 2*h, w, h))
     ];
@@ -50,7 +49,7 @@ function createPlayerSheet() {
         new PIXI.Texture(sheet, new PIXI.Rectangle(0, 3*h, w, h))
     ];
 
-    // walking
+    // Walking frames
     let numFrames = 9;
     playerSheet["walkLeft"] = []
     playerSheet["walkRight"] = []
@@ -60,6 +59,9 @@ function createPlayerSheet() {
     }
 }
 
+// Learned how to use media queries in JS
+// https://www.w3schools.com/howto/howto_js_media_queries.asp
+// Places the sprite
 function createPlayer() {
     let winWidth = window.matchMedia("(max-width: 1250px)")
 
@@ -77,22 +79,24 @@ function createPlayer() {
     player.play();
 }
 
-
+// Event handler
 function moveSprite(e) {
     mouseX = e.clientX;
 }
 
+// Always running in background to update sprite movement
 function gameLoop() {
     playerX = player.x
     
-    // resizing to be smaller
+    // Resizing sprite to be smaller
     // https://github.com/kittykatattack/learningPixi#size-and-scale
     player.scale.x = 0.75;
     player.scale.y = 0.75;
 
-    // if the sprite ends up in the range near mouse (considering speed)
+    // If the sprite ends up in the range near mouse (considering speed)
     let stop = (playerX <= mouseX+speed) && (playerX >= mouseX-speed);
 
+    // If on portal, create quest
     if (stop && !questCreated) {
         player.textures = playerSheet.faceFront;
         if (playerX >= (app.view.width*0.75) && playerX <= (app.view.width*0.83)) { // need to make this responsive
@@ -101,8 +105,8 @@ function gameLoop() {
         }
     }
 
+    // Creating walk animations based on where you click
     if (mouseX != undefined && !stop && mouseX < playerX) {
-        // if statement so the walk is animated
         if (!player.playing) {
             player.textures = playerSheet.walkLeft;
             player.play();
@@ -118,18 +122,19 @@ function gameLoop() {
         player.x += speed;
     };
 
+    // Populating the quest box
     function createQuest() {        
-        // first create the box
+        // Making box visible
         let container = document.getElementById("questBox");
         container.style.backgroundColor = "white";
         container.style.border = "2px solid black";
 
-        // now the header
+        // Populating header
         let header = document.createElement("h2");
         header.textContent = "New Quest!"
         container.appendChild(header);
 
-        // and the text
+        // Populating text
         let text = document.createElement("p");
         text.textContent = 
             `Hey there! Seems you've stumbled upon a 
@@ -138,6 +143,7 @@ function gameLoop() {
 
         container.appendChild(text);
 
+        // Creating buttons
         let btnContainer = document.createElement("div");
         btnContainer.setAttribute("id","btnContainer");
         container.appendChild(btnContainer)
@@ -147,7 +153,7 @@ function gameLoop() {
         noBtn.setAttribute("id", "noBtn");
         noBtn.onclick = function () {
             container.remove();
-            questCreated = false; // DEBUG
+            questCreated = false; 
         }
         btnContainer.appendChild(noBtn);
 
@@ -156,7 +162,7 @@ function gameLoop() {
         yesBtn.innerHTML = "ACCEPT";
         yesBtn.onclick = function () {
             location.href = "./work.html"
-            questCreated = false; // DEBUG
+            questCreated = false;
         }
         btnContainer.appendChild(yesBtn);
 
