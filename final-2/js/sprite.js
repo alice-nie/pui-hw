@@ -68,9 +68,10 @@ function createPlayer() {
     player.animationSpeed = .15;
     player.loop = false;
     player.x = app.view.width / 2;
-    player.y = app.view.height / 1.75;
-    if (winWidth) {
+    if (winWidth.matches) {
         player.y = app.view.height / 2;
+    } else{
+        player.y = app.view.height / 1.75;
     }
     app.stage.addChild(player);
     player.play();

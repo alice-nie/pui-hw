@@ -201,7 +201,7 @@ body{
     width: 70%;
     margin: auto;
     gap: 30px;
-    align-content: center;
+    align-items: center;
     margin-bottom: 50px;
 
 }
@@ -216,6 +216,14 @@ body{
 
 .tldr img{
     width: 40%;
+}
+
+@media screen and (max-width: 1250px){
+
+    .tldr img{
+        width: 50%;
+        height: 30%;
+    }
 }
 
 .tldr-summary{
