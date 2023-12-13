@@ -89,7 +89,7 @@ function gameLoop() {
 
     if (stop && !questCreated) {
         player.textures = playerSheet.faceFront;
-        if (playerX >= 1135 && playerX <= 1260) { // need to make this responsive
+        if (playerX >= (app.view.width*0.75) && playerX <= (app.view.width*0.83)) { // need to make this responsive
             createQuest();
             questCreated = true;
         }
