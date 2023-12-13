@@ -11,7 +11,7 @@ document.body.appendChild(app.view);
 let mouseX;
 let playerX;
 let playerSheet = {};
-let speed = 7;
+let speed = 5;
 
 // to ensure text doesn't repeat
 let questCreated = false;

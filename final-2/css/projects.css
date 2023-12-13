@@ -109,7 +109,7 @@ body{
 }
 
 .black{
-    background-color: black;
+    background-color: #2B2B2B;
     color: #F9F9F9
 }
 
@@ -245,7 +245,6 @@ body{
 .solution-zoo{
     width: 70%;
     margin: auto;
-
 }
 
 .solution-section {
@@ -260,6 +259,15 @@ body{
     list-style-position: outside;
     line-height: 30px;
     font-size: 18px;
+}
+
+.solution h2{
+    width: 70%;
+    margin: auto;
+}
+
+.solution img{
+    width: 50%;
 }
 
 .solution-zoo img{
