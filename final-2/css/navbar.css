@@ -1,0 +1,31 @@
+.nav {
+    width: 95%;
+    margin: auto;
+    padding: 25px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+}
+
+.nav img{
+    width: 200px;
+}
+
+.nav a{
+    color: grey;
+    font-family: "Raleway", sans-serif;
+    font-weight: normal;
+    margin: 10px;
+    font-size: 20px;
+    text-decoration: none;
+}
+
+.nav a:hover{
+    color: black;
+}
+
+.nav a.selected{
+    color: black;
+    text-decoration: underline;
+}

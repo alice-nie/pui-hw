@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8"/>
+        <title>Alice's Portfolio</title>
+
+        <link rel="stylesheet" type="text/css" href="../css/navbar.css">
+        <link rel="stylesheet" type="text/css" href="../css/projects.css">
+        
+        <script src="./js/projects.js" defer></script>
+
+
+    </head>
+    <body>
+        <div class="nav">
+            <div class="logo">
+                <a href="../index.html">
+                    <img src="../img/alice_logo.png">
+                </a>
+            </div>
+            <div class="nav-links">
+                <a class="selected" href="../work.html">Work</a>
+                <a href="../about.html">About</a>
+                <a href="https://drive.google.com/file/d/164VcvNvCxSc5qdXh77hi96VRhWvpl0m6/view">Resume</a>
+            </div>
+        </div>
+
+        <div class="project-header"> 
+            <div class="project-header-details">
+                <img class="logo" src="../img/zoo/zoo-logo.png">
+                <h1>Increasing engagement and decreasing wait times at the zoo</h1>
+                <img class="tags" src="../img/project-overview/zoo-tags.png">
+            </div>
+            <img src="../img/zoo/zoo-home.png">
+        </div>
+
+        <div class="blue divider">
+            <p> 01 / OVERVIEW </p>
+            <div class="line"></div>
+        </div>
+
+        <div class="overview">
+            <div class = "grid-container">
+                <div class="grid-1">
+                    <h4> Role & Team </h4>
+                    <p>I worked as a designer in a team of three for 3 weeks, from October 2022 - November 2022</p>
+                </div>
+                <div class="grid-2">
+                    <h4> Goal </h4>
+                    <p>Satisfy the needs of various stakeholders while increasing overall engagement at the Pittsburgh Zoo</p>
+                </div>
+                <div class="grid-3">
+                    <h4> What I did </h4>
+                    <p>UX research, UI/UX design, motion, prototyping, pivoting ideas, pitching</p>
+                </div>
+                <div class="grid-4">
+                    <h4> What I delivered </h4>
+                    <p>Sketches, prototypes, motion components, pitch for the product pivot</p>
+                </div>
+            </div>
+
+            <div class ="tldr">
+                <img src="../img/zoo/tldr-zoo.png">
+                <div class="tldr-summary">
+                    <p class="label">TL;DR</p>
+                    <h2>Designing a data-driven display</h2>
+                    <p>The Pittsburgh Zoo & Aquarium has received a grant from an 
+                        anonymous donor to increase visitors and engagement at the 
+                        Zoo in response to 2+ years of pandemic. Restrictions 
+                        include having only one screen and a ban on customer interaction. 
+                        Completed as a class project for Interaction Design Studio.
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <div class="blue divider">
+            <p> 02 / PROBLEM </p>
+            <div class="line"></div>
+        </div>
+
+        <div class="problem">
+            <h2>People are still hesitant to return to the zoo</h2>
+            <p>As the pandemic situation improves, people are still hesitant to 
+                resume social activities such as visiting zoos. In response to this 
+                challenge, the CEO of Pittsburgh Zoo has tasked our team with designing 
+                a display that would attract more visitors and boost engagement. 
+                Our objective is to minimize wait times and increase interaction with 
+                the zoo's popular events. To achieve this, the CEO has identified five 
+                distinct stakeholders that the display should address.</p>
+            <p class="how-might-we">“How might we minimize wait times and increase 
+                engagement at the Pittsburgh Zoo?”</p>
+        </div>
+
+        <div class="blue divider">
+            <p> 03 / SOLUTION </p>
+            <div class="line"></div>
+        </div>
+
+        <div class="solution-zoo">
+
+            <h2>To enter the zoo, you walk into the train…</h2>
+            <p>In order to maximize views and increase visitor engagement, 
+                we strategically placed our display inside the zoo train. 
+                Our display provides information on upcoming stops, including event details, 
+                venue capacity, animal names, and sponsors. If users are intrigued by the 
+                information, they have the option to get off at the next stop. 
+                Additionally, our display includes a preview of the next few stations 
+                to keep users informed and interested, allowing customers to plan 
+                their next steps.</p>
+            <p>To help minimize wait times and keep guests informed, our display 
+                also includes venue capacity, density maps, and show schedules. 
+                We designed the display with a vibrant and playful aesthetic that 
+                aligns with the child-friendly atmosphere of the zoo. While parents 
+                read through the information, children can stay entertained with 
+                fun animations and animal-to-word matching games.</p>
+
+            <img src="../img/zoo/solution-zoo.png">
+            <p class="caption">frame of the zoo monitor</p>
+        </div>
+
+        <div class="blue divider">
+            <p> 04 / ANALYSIS </p>
+            <div class="line"></div>
+        </div>
+
+        <div class="analysis">
+            <h2>Narrowing down our focus to 2 primary stakeholders and eliminating unnecessary data</h2>
+            <p>Before we could decide how to present the data to our users, we 
+                had to first understand it. We asked questions such as “does a 
+                user need to know how many shows there are per day at the Aquarium?” 
+                or “does the volunteer guest service agent need to know how long it 
+                takes for the train to get from station 1 to station 5?” We then 
+                mapped available data and metadata to each stakeholder, with a focus 
+                on mom and mobility-challenged elderly man customers. This allowed us 
+                to narrow our focus and exclude any unnecessary information, ensuring 
+                that our product is both comprehensive and effective in addressing our 
+                users' needs.</p>
+            <img src="../img/zoo/zoo-model.png">
+            <p class="caption">identifying relevant and unnecessary data for the stakeholders: 
+                mobility-challenged elderly man, volunteer guest service agent, mom, early career 
+                software engineer, and marketing manager.</p>
+
+        </div>
+
+        <div class="blue divider">
+            <p> 05 / DESIGN </p>
+            <div class="line"></div>
+        </div>
+
+        <div class="design">
+            <h2>Our initial idea was confusing and inconsistent</h2>
+            <p>Our first prototype consisted of four sections: the train station, 
+                zoo map, venue schedule, and venue information. We planned to put it 
+                outside the train station for people to view while waiting for the train. 
+                However, during a class-wide critique, we realized that our display had 
+                the following problems:</p>
+            <ul>
+                <li>The design does not match the fun atmosphere of the Zoo</li>
+                <li>The four components aren’t cohesive </li>
+                <li>It’s ok to focus on certain stakeholders, but some aspects of all 
+                    five stakeholder’s needs have to be reflected in the display</li>
+                <li>People may forget the display quickly if they can only see it at one train station</li>
+            </ul>
+            <img src="../img/zoo/design/zoo-iteration-1.png">
+            <p class="caption">The animation idea at the time was a train that changed the background image as it moved around the screen</p>
+        
+            <h2>I pitched that we pivot ideas and change our display location, content, and design</h2>
+            <p>Due to being unsatisfied with how well our display was meeting project goals, 
+                I proposed a pivot in direction to my team. I presented a re-analysis of our 
+                stakeholders’ needs and some preliminary sketches of a new idea that could better 
+                address user needs. One key difference was placing the display in the train.</p>
+            <img src="../img/zoo/design/pivot-sketch.png">
+            <p class="caption">The notes I shared with the team while proposing the pivot</p>
+
+            <h2>I lead a complete rehaul of our design in two days</h2>
+            <p>The team agreed to the pivot and I lead the redesign efforts of our new display. 
+                We worked in a time crunch as the project presentation was in just two days after the pivot was proposed.</p>
+            <img src="../img/zoo/design/zoo-redesign.png">
+            <p class="caption">the new frames of our redesign</p>
+        </div>
+
+        <div class="blue divider">
+            <p> 06 / REFLECTION </p>
+            <div class="line"></div>
+        </div>
+
+        <div class="reflection">
+            <div class="reflection-point">
+                <p class="big">Don't sacrfice <span class="bold">depth</span> for breadth</p>
+                <p class="reflection-text">We learned how important it is to focus on certain 
+                    stakeholders and to only include what is needed on the screen. A clean display 
+                    that best addresses the needs of one or two people is almost always better than 
+                    a sloppy display trying to hit the needs of all five users.</p>
+            </div>
+
+            <div class="reflection-point">
+                <p class="big">Don't be afraid to <span class="bold">pivot</span></p>
+                <p class="reflection-text">I’ve learned that I should not be afraid 
+                    to speak my mind and of change. I’ve also learned how important it 
+                    is to communicate my ideas clearly, with visuals, to ensure the team 
+                    is on the same page about our design goals.</p>
+            </div>
+        </div>
+
+        <div class="blue divider">
+            <p> 08 / OTHERS </p>
+            <div class="line"></div>
+        </div>
+
+        <div class="others">
+            <a href="./musique.html"><img src="../img/musique-card.png"></a>
+            <a href="./triptastic.html"><img src="../img/triptastic-card.png"></a>
+        </div>
+    </body>
+</html>

@@ -11,7 +11,7 @@ document.body.appendChild(app.view);
 let mouseX;
 let playerX;
 let playerSheet = {};
-let speed = 3;
+let speed = 7;
 
 // to ensure text doesn't repeat
 let questCreated = false;
@@ -66,7 +66,7 @@ function createPlayer() {
     player.animationSpeed = .15;
     player.loop = false;
     player.x = app.view.width / 2;
-    player.y = app.view.height - 175;
+    player.y = app.view.height / 1.5;
     app.stage.addChild(player);
     player.play();
 }
@@ -87,10 +87,6 @@ function gameLoop() {
     // if the sprite ends up in the range near mouse (considering speed)
     let stop = (playerX <= mouseX+speed) && (playerX >= mouseX-speed);
 
-    // if (stop) {
-    //     document.getElementById("debugging3").innerHTML = "stop";
-    //     ticker.stop();
-    // }
     if (stop && !questCreated) {
         player.textures = playerSheet.faceFront;
         if (playerX >= 1135 && playerX <= 1260) { // need to make this responsive
@@ -106,10 +102,6 @@ function gameLoop() {
             player.play();
         }
         player.x -= speed;
-        // if (stop) {
-        //     document.getElementById("debugging3").innerHTML = "stop";
-        //     player.textures = playerSheet.faceFront;
-        // }
     };
 
     if (mouseX != undefined && !stop && mouseX > playerX) {
@@ -118,10 +110,6 @@ function gameLoop() {
             player.play();
         }
         player.x += speed;
-        // if (stop) {
-        //     document.getElementById("debugging3").innerHTML = "stop";
-        //     player.textures = playerSheet.faceFront;
-        // }
     };
 
     function createQuest() {        
@@ -144,21 +132,26 @@ function gameLoop() {
 
         container.appendChild(text);
 
-        let yesBtn = document.createElement("button");
-        yesBtn.innerHTML = "Accept!";
-        yesBtn.onclick = function () {
-            location.href = "./projects.html"
-        }
-        container.appendChild(yesBtn);
+        let btnContainer = document.createElement("div");
+        btnContainer.setAttribute("id","btnContainer");
+        container.appendChild(btnContainer)
 
         let noBtn = document.createElement("button");
-        noBtn.innerHTML = "Not now";
+        noBtn.innerHTML = "NOT NOW";
+        noBtn.setAttribute("id", "noBtn");
         noBtn.onclick = function () {
             container.remove();
             questCreated = false; // DEBUG
         }
-        
-        container.appendChild(noBtn);
+        btnContainer.appendChild(noBtn);
+
+        let yesBtn = document.createElement("button");
+        yesBtn.setAttribute("id", "yesBtn");
+        yesBtn.innerHTML = "ACCEPT";
+        yesBtn.onclick = function () {
+            location.href = "./work.html"
+        }
+        btnContainer.appendChild(yesBtn);
 
     }
 }
