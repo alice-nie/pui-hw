@@ -9,6 +9,18 @@ body {
     background-size: cover;
 }
 
+@media (min-width: 1250px) {
+    body {
+        background-image: url("../img/background-laptop.png");
+        background-position: center center;
+        background-attachment: fixed;
+        overflow: hidden;
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+  }
+
+
 /* https://blog.logrocket.com/15-ways-implement-vertical-alignment-css/ */
 /* vertical alignment */
 #questBox {
