@@ -61,12 +61,17 @@ function createPlayerSheet() {
 }
 
 function createPlayer() {
+    let winWidth = window.matchMedia("(max-width: 1250px)")
+
     player = new PIXI.AnimatedSprite(playerSheet.faceFront);
     player.anchor.set(0.5);
     player.animationSpeed = .15;
     player.loop = false;
     player.x = app.view.width / 2;
     player.y = app.view.height / 1.75;
+    if (winWidth) {
+        player.y = app.view.height / 2;
+    }
     app.stage.addChild(player);
     player.play();
 }

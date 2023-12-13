@@ -16,14 +16,33 @@ p {
 }
 
 #about-container{
-    width: 70%;
-    display: flex;
-    margin: auto;
-    gap: 100px;
+  width: 80%;
+  display: flex;
+  margin: auto;
+  gap: 100px;
 }
+
+
+@media screen and (max-width: 1250px){
+  #about-container{
+    width: 80%;
+    margin: auto;
+  }
+
+  #about-text{
+    width: 70%;
+    margin: auto;
+  }
+
+}
+
+
+
 
 #about-container img{
     width: 50%;
+    display: block;
+    margin: auto;
 }
 
 .emphasis{
@@ -56,6 +75,11 @@ p {
     width: 80%;
 }
 
+@media screen and (max-width: 1250px){
+  .line{
+    width: 70%;
+  }
+}
 
 /* Code for the bottom gallery animation */
 /* https://codemyui.com/grayscale-to-colour-animation-on-hover-for-team-section/ */
@@ -74,6 +98,12 @@ div {
   padding: 0;
 }
 
+@media screen and (max-width: 1250px) {
+  .auto-grid{
+    width: 70%;
+    margin: auto;
+  }
+}
 .flow > * + * {
   margin-top: var(--flow-space, 1em);
 }
